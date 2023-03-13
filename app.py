@@ -6,6 +6,9 @@ import os
 from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
+UPLOAD_FOLDER = './'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
